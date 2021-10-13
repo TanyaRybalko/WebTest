@@ -13,8 +13,15 @@ public class WebTest {
         String chromeDriver = "webdriver.chrome.driver";
         String url = "http://www.99-bottles-of-beer.net/";
         String expectedResult = "http://www.99-bottles-of-beer.net/";
+        String CheckLine = "Check line";
 
+/*String driverPath = "C:/TanyaR/ChromeDriver/chromedriver.exe";
+        String chromeDriver = "webdriver.chrome.driver";
+        String url = "http://www.99-bottles-of-beer.net/";
+        String expectedResult = "http://www.99-bottles-of-beer.net/";
+        String CheckLine = "Check line";
 
+ */
         System.setProperty(chromeDriver, driverPath);
         WebDriver driver = new ChromeDriver();   // open browser
 
@@ -25,6 +32,8 @@ public class WebTest {
 
         Assert.assertEquals(actualResutl, expectedResult);
 
+        //close driver
+        // go out
         driver.close();
         driver.quit();
     }
